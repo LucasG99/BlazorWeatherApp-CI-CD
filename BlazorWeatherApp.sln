@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorWeatherApp", "BlazorW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWeatherApp.Web", "BlazorWeatherApp\BlazorWeatherApp.Web\BlazorWeatherApp.Web.csproj", "{8276F698-D916-4103-8A8C-F3B59722CC54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWeatherApp.Tests", "BlazorWeatherApp.Tests\BlazorWeatherApp.Tests.csproj", "{CDBF9C76-E33A-4677-91D0-600B647B446F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,18 @@ Global
 		{8276F698-D916-4103-8A8C-F3B59722CC54}.Release|x64.Build.0 = Release|Any CPU
 		{8276F698-D916-4103-8A8C-F3B59722CC54}.Release|x86.ActiveCfg = Release|Any CPU
 		{8276F698-D916-4103-8A8C-F3B59722CC54}.Release|x86.Build.0 = Release|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Debug|x64.Build.0 = Debug|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Debug|x86.Build.0 = Debug|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Release|x64.ActiveCfg = Release|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Release|x64.Build.0 = Release|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Release|x86.ActiveCfg = Release|Any CPU
+		{CDBF9C76-E33A-4677-91D0-600B647B446F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
