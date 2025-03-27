@@ -1,0 +1,42 @@
+name: .NET CD
+
+on:
+  push:
+    branches: [ main ]
+  workflow_run:
+    workflows: [".NET CI"]
+    branches: [main]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'push' }}
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
+
+    - name: Publish API
+      run: dotnet publish BlazorWeatherApp.Api/BlazorWeatherApp.Api.csproj -c Release -o published-api
+
+    - name: Publish Blazor WebAssembly
+      run: dotnet publish BlazorWeatherApp.Web/BlazorWeatherApp.Web.csproj -c Release -o published-web
+
+    - name: Deploy to Render.com
+      env:
+        RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+      run: |
+        curl -s https://raw.githubusercontent.com/render-examples/render-cli/main/install.sh | bash
+        render deploy --id blazor-weather-api
